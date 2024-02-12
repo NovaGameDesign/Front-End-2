@@ -4,80 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+      /* The mozilla docs was so useful https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas for learning about grid area and stuff*/
+      body
+      {
+        display: grid;      
+        grid-template-areas: 
+        "head head"
+        "nav main"
+        "foot foot"
+        
+      }
+      header
+      {
+        grid-area: head;
+        text-align: center;
+        font-size: larger;
+        border-bottom: 6px double darkcyan;
+      }
+      img
+      {
+        width: 375px;
+      }
+      #indent
+      {
+        grid-area: main;
+        padding: 1%;
+        margin-left: 5%;
+        border-left: 6px double darkcyan;
+      }
+      #icon
+      {
+        width: 75px; 
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      nav a
+      {        
+        grid-area: nav;         
+        position: sticky;
+      }
+      a
+      {
+        color: inherit;
+      }
+      footer
+      {
+        text-align: center;
+        grid-area: foot;
+        border-top:  6px double darkcyan;
+        padding: 1%;
+      }
+    </style>
 </head>
 <body>
-    <h1>Github Tutorial</h1>
-    <p>
-      Git is a vital part of many development workflows, including Game Development, Software Development, and even User Interface Design. What actually is Git used for, though? 
-      <br><br>
-      Git is a type of version control, a way of tracking project history and changes. This allows users to see exactly what was added, removed, or edited in a project. Additionally, because Git tracks all changes, you can see the entire version history of a project. This means that if something breaks along the way, you can reverse the project to a prior version without losing progress. 
-    </p>
-
-    <h2>
-      Setting up the Environment     
-    </h2>
-    <p>
-      In order to use the full functionality of Github you must first install and setup Git. 
-    </p>
-    <h3>
-      Installing Git
-    </h3>
-    <p>
-      While you may opt to use a GUI based version of git (such as GitHub Desktop or Sourcetree) we will focus on the traditional install methodology.       
-    </p>
-    <ol>
-      <li>Navigate to Git and <a href="https://git-scm.com/downloads">download</a> the desktop version. </li>
-      <li>Run the installer following all on-screen prompts</li>
-    </ol>
-    <h3>Setting up Git via Visual Studio Code</h3>
-    <p>
-      To setup Git using traditional methods would involve using the console or power-shell, we can instead utilize Visual Studio code. 
-    </p>
-    <ol>
-      <li>
-        Open Visual Studio Code.
-      </li>
-      <li>
-        At the top of your screen, click the terminal tab.
-      </li>
-      <li>Click new terminal (CTRL+SHIFT+`)</li>
-      <li>Configure your git username and email by using these two commands: 
-        <br>"$ git config --global user.name "John Doe" 
-        <br>"$ git config --global user.email johndoe@example.com"</li>
-      <li>Optionally you can also configure your editor as noted by the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">documentation.</a></li>
-
-    </ol>
-    <h2>
-      Creating and Cloning a GitHub Repository
-    </h2>
-    <h3>Creating a new Repository via Github</h3>
-    <img src="img/github-clone.png" alt="Cloning a repository locally.">
-    <ol>
-      <li>Navigate to <a href="https://github.com">Github's</a> website</li>
-      <li>Sign into your account if needed.</li>
-      <li>In the top left corner click the green "New" button to begin creating a new repository</li>
-      <li>Input all relevant information such as repo name, description, and basic privacy settings.</li>
-      <li>Optionally you may continue to configure your settings in the expanded tab.</li>
-    </ol>
-    <h3>Cloning your Repositories via Visual Studio Code.</h3>
-    <ol>
-      <li>Open Visual Studio Code.</li>
-      <li>Navigate to the Source Control tab on the left-hand side of your screen.</li>
-      <li>Click "Clone Repository"</li>
-      <li>Click on one of the options that appears. </li>
-    </ol>
-    <h2>
-      Basic Git Operations in VS Code
-    </h2>
-    <h2>
-      Branching with VS Code
-    </h2>
-    <h2>
-      Working with Remote Repositories
-    </h2>
-    <h2>
-      Pull Requests and Code Reviews within VS Code
-    </h2>
+    <header>
+      <img src="img/Git_icon.svg.png" alt="" id="icon"> <img src="img/25231.png" alt="" id="icon"> <img src="img/Visual_Studio_Code_1.35_icon.svg.png" alt="" id="icon">
+      <h1>Github Tutorial -- Installing and Using</h1>
+    </header>
+    <nav>      
+        <a href="#1">Setting Up the Environment</a> <br>  
+        <a href="#2">Creating and Cloning a GitHub Repository</a> <br>  
+        <a href="#3">Basic Git Operations in VS Code</a> <br>
+        <a href="#4">Branching with VS Code</a> <br>
+        <a href="#5">Working with Remote Repositories</a> <br>
+        <a href="#6">Pull Requests and Code Reviews within VS Code</a> <br>
+    </nav>
+    <div id="indent">
+      <p>
+        Git is a vital part of many development workflows, including Game Development, Software Development, and even User Interface Design. What actually is Git used for, though? 
+        <br><br>
+        Git is a type of version control, a way of tracking project history and changes. This allows users to see exactly what was added, removed, or edited in a project. Additionally, because Git tracks all changes, you can see the entire version history of a project. This means that if something breaks along the way, you can reverse the project to a prior version without losing progress. 
+      </p>
+  
+      <h2 id="1">
+        Setting up the Environment     
+      </h2>
+      <p>
+        In order to use the full functionality of Github you must first install and setup Git. 
+      </p>
+      <h3>
+        Installing Git
+      </h3>
+      <p>
+        While you may opt to use a GUI based version of git (such as GitHub Desktop or Sourcetree) we will focus on the traditional install methodology.       
+      </p>
+      <ol>
+        <li>Navigate to Git and <a href="https://git-scm.com/downloads">download</a> the desktop version. </li>
+        <li>Run the installer following all on-screen prompts</li>
+      </ol>
+      <h3>Setting up Git via Visual Studio Code</h3>
+      <p>
+        To setup Git using traditional methods would involve using the console or power-shell, we can instead utilize Visual Studio code. 
+      </p>
+      <ol>
+        <li>
+          Open Visual Studio Code.
+        </li>
+        <li>
+          At the top of your screen, click the terminal tab.
+        </li>
+        <li>Click new terminal (CTRL+SHIFT+`)</li>
+        <li>Configure your git username and email by using these two commands: 
+          <br>"$ git config --global user.name "John Doe" 
+          <br>"$ git config --global user.email johndoe@example.com"</li>
+        <li>Optionally you can also configure your editor as noted by the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">documentation.</a></li>
+  
+      </ol>
+      <h2 id="2">
+        Creating and Cloning a GitHub Repository
+      </h2>
+      <h3>Creating a new Repository via Github</h3>
+      <img src="img/github-clone.png" alt="Cloning a repository locally.">
+      <ol>
+        <li>Navigate to <a href="https://github.com">Github's</a> website</li>
+        <li>Sign into your account if needed.</li>
+        <li>In the top left corner click the green "New" button to begin creating a new repository</li>
+        <li>Input all relevant information such as repo name, description, and basic privacy settings.</li>
+        <li>Optionally you may continue to configure your settings in the expanded tab.</li>
+      </ol>
+      <h3>Cloning your Repositories via Visual Studio Code.</h3>
+      <ol>
+        <li>Open Visual Studio Code.</li>
+        <li>Navigate to the Source Control tab on the left-hand side of your screen.</li>
+        <li>Click "Clone Repository"</li>
+        <li>Click on one of the options that appears.</li>
+        <li>If needed, choose a file path for the repository to clone into.</li>
+      </ol>
+      <h2 id="3">
+        Basic Git Operations in VS Code
+      </h2>
+      <img src="img/options-in-vs-code.png" alt="">
+      <p>      
+        The basic operations that can be found in VS Code include:      
+        <ul>
+          <li><b>Fetch Changes</b> - Check to see if any changes on the project were made.</li>
+          <li><b>Pull Changes</b> - Pull changes into your local copy.</li>
+          <li><b>Commit Changes</b> - Save your local changes onto Git and add a commit message (generally used as an overview of what the changes were).</li>
+          <li><b>Push Changes</b> - Push your commits to your desired branch so all other users can access your code.</li>
+          <li><b>Branch Options</b> - In VS Code you can change your current branch, make a new one, or edit a branch.</li>
+        </ul>
+      </p>
+      <h2 id="4">
+        Branching with VS Code
+      </h2>
+      <img src="img/making-a-new-branch.png" alt="">
+      <p>
+        <h3>Creating a new branch</h3>>
+        <ol>
+          <li>
+            Navigate to the source control tab. 
+          </li>
+          <li>
+            Click the three dots on the top right of the control section. 
+          </li>
+          <li>
+            In the dropdown menu hover over "branch". 
+          </li>
+          <li>
+            Click "Create Branch".
+          </li>
+          <li>
+            In the popup menu type in the name of the branch you want to create, click enter when done.
+          </li>
+          <li>
+            You will be automatically swapped to your new branch the moment it is created. 
+          </li>
+        </ol>
+        <h3>
+          Switching between branches
+        </h3>
+        <ul>
+          <li>
+            Open VS Code. 
+          </li>
+          <li>
+            In the bottom left-hand corner click your current branch.
+          </li>
+          <li>
+            A popup will appear at the top, from this dropdown menu select the branch you'd like to swap to. 
+          </li>
+          <li>You will (usually) immediately swap branches after selecting a new one.</li>
+        </ul>
+      </p>
+      <h2 id="5">
+        Working with Remote Repositories
+      </h2>
+      <img src="img/git-branches-merge.png" alt="">
+      <p>
+        Working with remote repositories allows you to share work across multiple different people. Your changes can be seamlessly merged into the "main" branch of your repository, usually, without conflicts. 
+        <br>
+        There are a few options that were already mentioned which allow you to add an manage repos. 
+        <ul>
+          <li><b>Create Branches</b> - VS Code allows you to make new branches.</li>
+          <li><b>Merge Branches</b> - in VS code you are able to merge changes between branches into one another. </li>
+          <li><b>Change Settings</b> - It is heavily recommended to use some kind of branch protection settings when working with remote repos, especially if multiple people are working on the project.</li>
+          <li><b>Review Changes</b> - In addition to being able to push changes, users can also review the changes they have made, or other folks have made. </li>
+        </ul>
+      </p>
+      
+      <h2 id="6">
+        Pull Requests and Code Reviews within VS Code
+      </h2>
+      <p>
+        Creating a pull request in VS Code is quite easy. 
+        <ol>
+          <li>
+            Open VS Code.
+          </li>
+          <li>
+            Hover over the branch tab.
+          </li>
+          <li>
+            First attempt to fetch (this checks the repository for changes).
+          </li>
+          <li>
+            After, you can pull any changes that were made. 
+          </li>
+        </ol>
+        Review and discuss pull requests.
+      </p>
+    </div>    
+    <footer>
+      &copy;2024 Cole Andrews
+    </footer>
 </body>
 </html>
 
