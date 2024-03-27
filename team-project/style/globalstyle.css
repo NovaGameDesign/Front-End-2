@@ -3,44 +3,91 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /*border: 0.5px solid salmon;*/
 }
 img
 {
     border-radius: 25px;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
 }
 body
 {
     height: 500vh;
+    
+    grid-template-areas: 
+    "head head head"
+    "content content"
+    "foot foot foot";
 }
-.video-background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
+#mainContent
+{
+  grid-area: content;
 }
-[data-bs-theme="blue"] {
-    --bs-body-color: var(--bs-white);
-    --bs-body-color-rgb: #{to-rgb($white)};
-    --bs-body-bg: var(--bs-blue);
-    --bs-body-bg-rgb: #{to-rgb($blue)};
-    --bs-tertiary-bg: #{$blue-600};
-  
-    .dropdown-menu {
-      --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
-      --bs-dropdown-link-active-bg: #{$blue-700};
-    }
-  
-    .btn-secondary {
-      --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
-      --bs-btn-border-color: #{rgba($white, .25)};
-      --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
-      --bs-btn-hover-border-color: #{rgba($white, .25)};
-      --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
-      --bs-btn-active-border-color: #{rgba($white, .5)};
-      --bs-btn-focus-border-color: #{rgba($white, .5)};
-      --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
-    }
-  }
+#navbar
+{
+
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.navbar
+{
+  grid-area: head;
+  background: linear-gradient(to bottom, rgba(15,33,76,1) 0%,rgba(15,33,76,0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.dropdown-menu, dropdown-item
+{
+  background-color: rgb(11, 24, 54) !important;
+}
+.navbar-text, .navbar-brand
+{
+  color: aliceblue;
+}
+#shiftRight
+{  
+  right: 0px !important;
+}
+.header-container
+{
+  width: 100%;
+  background-color: black;
+}
+.indent
+{
+  margin-left: 15%;
+  margin-right: 15%; 
+}
+.threeColSection
+{
+  display: grid;
+  grid-template-areas: 
+  "one two three"
+  "one two three";
+}
+#col1
+{
+
+  width: fit-content;
+  margin: 5px;
+  border: 1px solid black;
+  grid-area: one;
+}
+#col2
+{
+
+  width: fit-content;
+  margin: 5px;
+  border: 1px solid black;
+  grid-area: two;
+}
+#col3
+{
+
+  width: fit-content;
+  margin: 5px;
+  border: 1px solid black;
+  grid-area: three;
+}
+

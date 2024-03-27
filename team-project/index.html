@@ -10,43 +10,90 @@
     
 </head>
 <body>
-  // Cole
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid" id="navbar">
       <a class="navbar-brand" href="#">GSAP overview</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Usages
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Usage One (replace with acutal)</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Usage Two (replace with acutal)</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Usage Three (replace with acutal)</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Usage Four (replace with acutal)</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">History</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-disabled="true">Installing</a>
-          </li>
-        </ul>
-      </div>
+      <div id="shiftRight">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>            
+              <a class="nav-link" href="#">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-disabled="true">Installing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Usages
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Usage One (replace with acutal)</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Usage Two (replace with acutal)</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Usage Three (replace with acutal)</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Usage Four (replace with acutal)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"> 
+          </ul>
+        </div>
+      </div>      
     </div>
   </nav>
 
+  <div id="mainContent">
+    <div class="header-container">
+      <img src="img/geoemtric.gif" alt="">
+    </div>
+    <header class="indent">
+      <h3>Powerful animation with simple code, GreenSock Animation Platform</h1>
+    </header>
+    <section class="indent">
+      GreenSock Animation platform, or GSAP for short, is a powerful animation library for web development. Using GSAP developers can animate practically anything with simple APIs using JavaScript. 
+      With its powerful suite of tools GSAP can be seen in use on a multitude of websites such as YouTube and Amazon. 
+    </section>
+  
+    <div class="threeColSection">
+      <section class="indent" id="col1">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Animated card fly in</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </section>
+      <section id="col2">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Animated card fly in</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </section>
+      <section id="col3">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Animated card fly in</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </section> 
+    </div>      
+  </div>
+ 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
