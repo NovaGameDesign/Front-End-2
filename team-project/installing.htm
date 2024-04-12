@@ -12,14 +12,13 @@
         .code-snippet {
             position: relative;
             background-color: #f4f4f4;
-            padding: 2em 1em 1em; /* Increase top padding to accommodate the header */
+            padding: 1em;
             margin-bottom: 1em;
             border: 1px solid #ddd;
             border-radius: 5px;
             overflow-x: auto;
             max-width: 100%;
             width: fit-content;
-            position: relative;
         }
         
         .code-header {
@@ -30,8 +29,9 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             position: absolute;
-            top: 0;
+            top: 0; /* Align with the top of the .code-snippet box */
             left: 0;
+            right: 0;
         }
         
         .copy-btn {
@@ -41,7 +41,7 @@
             padding: 0.5em 1em;
             border-top-right-radius: 5px;
             position: absolute;
-            top: 0;
+            top: 0; /* Align with the top of the .code-snippet box */
             right: 0;
             cursor: pointer;
         }
@@ -49,8 +49,9 @@
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
-            margin: 0;
+            margin: 2em 0 0; /* Adjust as needed */
         }
+
 
         .copy-btn::before {
             margin-right: 5px;
