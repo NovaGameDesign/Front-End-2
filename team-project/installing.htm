@@ -96,23 +96,24 @@
         function copyCode() {
             const codeElement = document.querySelector('.code-snippet pre code');
             const codeText = codeElement.innerText;
-
+        
             const textarea = document.createElement('textarea');
             textarea.value = codeText;
             document.body.appendChild(textarea);
-
+        
             textarea.select();
             textarea.setSelectionRange(0, 99999); // mobile
-
+        
             document.execCommand('copy');
-
+        
             document.body.removeChild(textarea);
-
+        
             const copyButton = document.querySelector('.code-snippet button');
-            copyButton.textContent = 'Copied!';
+            copyButton.innerHTML = 'Copied! <i class="fas fa-clipboard"></i>';
             setTimeout(() => {
-                copyButton.textContent = 'Copy <i class="fas fa-clipboard"></i>';
+                copyButton.innerHTML = 'Copy <i class="fas fa-clipboard"></i>';
             }, 2000); // reset
         }
+
     </script>
 </html>
