@@ -109,11 +109,13 @@
             document.body.removeChild(textarea);
         
             const copyButton = document.querySelector('.code-snippet button');
-            copyButton.innerHTML = 'Copied! <i class="fas fa-clipboard"></i>';
+            const originalText = copyButton.textContent;
+            copyButton.textContent = 'Copied!';
             setTimeout(() => {
-                copyButton.innerHTML = 'Copy <i class="fas fa-clipboard"></i>';
+                copyButton.textContent = originalText;
             }, 2000); // reset
         }
+
 
     </script>
 </html>
