@@ -27,9 +27,6 @@
             padding: 0.5em;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         pre {
@@ -38,7 +35,11 @@
             margin: 0;
         }
 
+
         .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             background-color: #007bff;
             color: #fff;
             border: none;
@@ -46,7 +47,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            font-size: 14px;
         }
 
         .copy-btn::before {
@@ -78,13 +78,10 @@
     <p>
         The fastest and easiest way to get started with GSAP is to use the CDN hosted by them.
     </p>
-    
     <div class="code-snippet">
-        <div class="code-header">
-            <div>HTML</div> 
-            <button class="copy-btn"
-        </div>
+        <div class="code-header">HTML</div>
         <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">&lt;/script></code></pre>
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
     </div>
 
     <p class="content-below">
