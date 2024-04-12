@@ -115,16 +115,13 @@
         
             document.body.removeChild(textarea);
         
-            const copyStatus = document.querySelector('.copy-status');
-            copyStatus.style.display = 'inline'; 
+            const copyButton = document.querySelector('.code-snippet .copy-btn');
+            const originalText = copyButton.textContent;
+            copyButton.textContent = 'Copied!';
             setTimeout(() => {
-                copyStatus.style.display = 'none'; 
-            }, 2000);
+                copyButton.textContent = originalText;
+            }, 2000); // Reset after 2 seconds
         }
-
-
-
-
 
     </script>
 </html>
