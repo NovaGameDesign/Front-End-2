@@ -83,7 +83,8 @@
     <div class="code-snippet">
         <div class="code-header">HTML</div>
         <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">&lt;/script></code></pre>
-        <button class="copy-btn" onclick="copyCode()">Copy <i class="fas fa-clipboard"></i></button>
+        <button class="copy-btn" onclick="copyCode()"><span class="copy-text">Copy</span> <i class="fas fa-clipboard"></i></button>
+
     </div>
 
     <p class="content-below">
@@ -108,12 +109,14 @@
         
             document.body.removeChild(textarea);
         
-            const copyButton = document.querySelector('.code-snippet button');
-            copyButton.innerHTML = 'Copied! <i class="fas fa-clipboard"></i>';
+            const copyText = document.querySelector('.code-snippet .copy-text');
+            const originalText = copyText.textContent;
+            copyText.textContent = 'Copied!';
             setTimeout(() => {
-                copyButton.innerHTML = 'Copy <i class="fas fa-clipboard"></i>';
+                copyText.textContent = originalText;
             }, 2000); // reset
         }
+
 
 
 
