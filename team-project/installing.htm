@@ -66,37 +66,148 @@
             display: none;
         }
 
+        .code-snippet2 {
+            position: relative;
+            background-color: #f4f4f4;
+            padding: 1em;
+            margin-bottom: 1em;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-width: 100%;
+            width: fit-content;
+        }
+
+        .copy-btn2 {
+            background-color: #282828;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1.5em;
+            border-top-right-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+
+        .copy-btn2::before {
+            margin-right: 5px;
+        }
+
+        .copy-btn2:hover {
+            background-color: #0056b3;
+        }
+
+        .code-snippet3 {
+            position: relative;
+            background-color: #f4f4f4;
+            padding: 1em;
+            margin-bottom: 1em;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-width: 100%;
+            width: fit-content;
+        }
+
+        .copy-btn3 {
+            background-color: #282828;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1.5em;
+            border-top-right-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+
+        .copy-btn3::before {
+            margin-right: 5px;
+        }
+
+        .copy-btn3:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+
     </style>
 </head>
 <body>
     <!-- How to's on how to install the library. -->
     <!-- Julia -->
-    <h1>Getting Started With GSAP</h1>
-    <p>
-        GSAP, short for GreenSock Animation Platform, is a powerful JavaScript library for creating high-performance animations 
-        for the web. This guide will walk you through the process of installing GSAP and getting started with basic animations.
-    </p>
-    <br>
-    <h2>Installing GSAP</h2>
-    <p>
-        To install GSAP, you have a couple of options:
-    </p>
-    <h3>Option 1: CDN</h3>
-    <p>
-        The fastest and easiest way to get started with GSAP is to use the CDN hosted by them.
-    </p>
-    <div class="code-snippet">
-    <div class="code-header">HTML</div>
-    <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">&lt;/script></code></pre>
-    <button class="copy-btn" onclick="copyCode()">
-        <span class="button-text">Copy</span>
-        <i class="fas fa-clipboard"></i>
-    </button>
-    </div>
+    
+    <div class="container">
+        <h1>Getting Started With GSAP</h1>
+        <p>
+            GSAP, short for GreenSock Animation Platform, is a powerful JavaScript library for creating high-performance animations 
+            for the web. This guide will walk you through the process of installing GSAP and getting started with basic animations.
+        </p>
+        <br>
+        <h2>Installing GSAP</h2>
+        <p>
+            To install GSAP, you have a couple of options:
+        </p>
+        <br>
 
-    <p class="content-below">
-        Just copy and paste the script tag above into your HTML, and you're ready to use GSAP.
-    </p>
+        <h3>Option 1: CDN</h3>
+        <p>
+            The fastest and easiest way to get started with GSAP is to use the CDN hosted by them.
+        </p>
+        <div class="code-snippet">
+        <div class="code-header">html</div>
+        <pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">&lt;/script></code></pre>
+        <button class="copy-btn" onclick="copyCode()">
+            <span class="button-text">Copy</span>
+            <i class="fas fa-clipboard"></i>
+        </button>
+        </div>
+
+        <p class="content-below">
+            Just copy and paste the script tag above into your HTML, and you're ready to use GSAP.
+        </p>
+
+        <br>
+        <h3>Option 2: NPM</h3>
+        <p>
+            However, if you prefer to use a package manager, you can also install GSAP via npm.
+        </p>
+        <div class="code-snippet2">
+        <div class="code-header">bash</div>
+        <pre><code>npm install gsap</code></pre>
+        <button class="copy-btn2" onclick="copyCode2()">
+            <span class="button-text2">Copy</span>
+            <i class="fas fa-clipboard"></i>
+        </button>
+        </div>
+
+        <p class="content-below">
+            After that, import GSAP into your JavaScript file.
+        </p>
+        <div class="code-snippet3">
+            <div class="code-header">javascript</div>
+            <pre><code>import { gsap } from "gsap";</code></pre>
+            <button class="copy-btn3" onclick="copyCode3()">
+                <span class="button-text3">Copy</span>
+                <i class="fas fa-clipboard"></i>
+            </button>
+            </div>
+
+        <br>
+        <h3>Option 3: Download</h3>
+        <p>
+            You can also download GSAP directly from <a href="https://greensock.com/gsap/">here.</a>
+
+        </p>
+
+
+
+    </div>
    
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -124,6 +235,51 @@
     }, 2000); 
 }
 
+function copyCode2() {
+    const codeElement = document.querySelector('.code-snippet2 pre code');
+    const codeText = codeElement.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = codeText;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // mobile
+
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    const copyButton = document.querySelector('.code-snippet2 .copy-btn2 .button-text2');
+    const originalText = copyButton.textContent;
+    copyButton.textContent = 'Copied!';
+    setTimeout(() => {
+        copyButton.textContent = originalText;
+    }, 2000); 
+}
+
+function copyCode3() {
+    const codeElement = document.querySelector('.code-snippet3 pre code');
+    const codeText = codeElement.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = codeText;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // mobile
+
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    const copyButton = document.querySelector('.code-snippet3 .copy-btn3 .button-text3');
+    const originalText = copyButton.textContent;
+    copyButton.textContent = 'Copied!';
+    setTimeout(() => {
+        copyButton.textContent = originalText;
+    }, 2000); 
+}
 
     </script>
 </html>
