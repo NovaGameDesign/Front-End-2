@@ -1,6 +1,6 @@
 *
 {
-    margin: 0px;
+    margin: opx;
     padding: 0px;
     box-sizing: border-box;
     /*border: 0.5px solid salmon;*/
@@ -15,12 +15,11 @@ img
 }
 body
 {
-    height: 500vh;
-    
-    grid-template-areas: 
+    grid-template-areas:
     "head head head"
     "content content"
     "foot foot foot";
+
 }
 #mainContent
 {
@@ -90,4 +89,3 @@ body
   border: 1px solid black;
   grid-area: three;
 }
-
