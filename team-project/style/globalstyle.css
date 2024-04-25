@@ -11,7 +11,6 @@ img
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
 }
 body
 {
@@ -19,6 +18,8 @@ body
     "head head head"
     "content content"
     "foot foot foot";
+
+    padding-bottom: 50px;
 
 }
 #mainContent
@@ -89,3 +90,4 @@ body
   border: 1px solid black;
   grid-area: three;
 }
+
