@@ -90,4 +90,9 @@ body
   border: 1px solid black;
   grid-area: three;
 }
+.dividingLine
+{
+  margin: 25px;
+  border-bottom: 1px solid rgb(30, 68, 156)
+}
 
