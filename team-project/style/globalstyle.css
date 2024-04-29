@@ -3,7 +3,12 @@
     margin: opx;
     padding: 0px;
     box-sizing: border-box;
-    /*border: 0.5px solid salmon;*/
+    /* border: 0.5px solid salmon;*/
+} 
+h1, h2
+{
+  width: 50vw;
+  border-bottom: 2px solid grey;
 }
 img
 {
@@ -20,7 +25,11 @@ body
     "foot foot foot";
 
     padding-bottom: 50px;
-
+  
+}
+footer
+{
+  text-align: center;
 }
 #mainContent
 {
@@ -35,7 +44,7 @@ body
 .navbar
 {
   grid-area: head;
-  background: linear-gradient(to bottom, rgba(15,33,76,1) 0%,rgba(15,33,76,0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(15,33,76,1) 75%,rgba(15, 33, 76, .5)); 
 }
 .dropdown-menu, dropdown-item
 {
@@ -51,7 +60,7 @@ body
 }
 .header-container
 {
-  width: 100%;
+  width: 100vw;
   background-color: black;
 }
 .indent
@@ -95,4 +104,15 @@ body
   margin: 25px;
   border-bottom: 1px solid rgb(30, 68, 156)
 }
-
+.img-100p
+{
+  width: 100%;
+}
+@media screen and (max-width: 725px)
+{
+  .indent
+  {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
