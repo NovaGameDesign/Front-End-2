@@ -139,7 +139,7 @@ h1 {
  border: solid 2px var(--color-surface-white);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
   color: var(--color-just-black);
   position: relative;
   border-radius: 10px;
@@ -150,6 +150,14 @@ h1 {
   padding: 8px;
   line-height: 28px;
   border-radius: 10px;
+}
+.box:nth-child(even) 
+{
+   background-color: #f100cb;
+}
+.box:nth-child(odd) 
+{
+   background-color: salmon;
 }
 .box:nth-child(1) {
   background-color: var(--color-lilac);
@@ -163,6 +171,10 @@ h1 {
 .box:nth-child(4) {
    background-color: var(--color-lt-green);
 }
+.box:nth-child(5) {
+   background-color: #0ae448;
+}
+
 
 button {
   margin: 0 auto;
@@ -196,7 +208,7 @@ button {
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" aria-disabled="true" href="#">Home</a>
             </li>            
-              <a class="nav-link" href="#">History</a>
+              <a class="nav-link" href="history.htm">History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="installing.htm">Installing</a>
@@ -236,9 +248,7 @@ button {
       GreenSock Animation platform, or GSAP for short, is a powerful animation library for web development. Using GSAP developers can animate practically anything with simple APIs using JavaScript. 
       With its powerful suite of tools GSAP can be seen in use on a multitude of websites such as YouTube and Amazon. 
     </section>
-    <div class="dividingLine"></div>
-  
-  
+    <div class="dividingLine"></div> 
 
   </div>
   <div style="margin-bottom: 15px;">
@@ -252,26 +262,72 @@ button {
     <div class="for">for</div>
     <div class="gsap">GSAP</div>
   </div>
-
- 
-
-  </div>
+  
   
   
   <h4 style="margin-top: 25px;">Smoothly change flex direction with GSAP's Flip Plugin</h4>
   
-  <div class="group">
-    <div class="box">Common "FLIP" techniques employed by other tools won't work with flex elements because of the way browsers handle width/height. 
+  <div class="group" id="group">
+    <div class="box">These text boxes with change their position and orientation as desired! 
     </div>
-    <div class="box">Simply set <code>absolute: true</code> to have GSAP's Flip plugin make the elements position: absolute during the flip to work around challenges with flex and grid layouts. 
+    <div class="box">With a few short lines of code you can create powerful flip interactions like this.
     </div>
     <div class="box">When the flip animation is done, elements get reverted back to their normal positioning and everything appears seamless.</div>
-    <div class="box">Happy flipping!</div>
+    
   </div>
   <button id="changeLayout" class="button">change</button> 
+  <button id="AddMore" class="button">Add Box</button> 
 
-<div class="dividingLine">
-</div>
+  <div class="dividingLine"> </div>
+
+  <h2>
+    Explore other usages?
+  </h2>
+  <div class="indent">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="usage-one.htm" class="btn btn-primary">Explore PAGE 1</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="usage-two.htm" class="btn btn-primary">Explore PAGE 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-bottom: 1px solid black; margin: 15px;"></div>
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="usage-three.htm" class="btn btn-primary">Explore PAGE 3</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="usage-four.htm" class="btn btn-primary">Explore PAGE 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -311,6 +367,23 @@ function nextState() {
 gsap.delayedCall(1, nextState);
 </script>
 
+<script>
+
+const source = document.getElementById("group");
+const button = document.getElementById("AddMore");
+
+
+
+button.addEventListener("click", () => {
+  
+  let newBox = document.createElement('div');
+  newBox.innerHTML = "This box was generated dynamically";
+
+  newBox.setAttribute("class","box");
+  source.appendChild(newBox);
+});        
+
+</script>
 <script>
   gsap.registerPlugin(Flip);
 
