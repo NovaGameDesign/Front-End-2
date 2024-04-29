@@ -1,14 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLACEHOLDER NAME </title>
+    <title>Team Introductions</title>
     <link rel="stylesheet" href="style/globalstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    .container {
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+    
+    img {
+        max-height: 200px;
+    }
+    
+    #some-box {
+        padding:40px 0px 80px;
+    }
+
+    #some-box a {
+        color:#70BCB8;
+        text-decoration:none;
+        display:block;
+        font-weight:bold;
+    }
+
+    #some-box a:hover {
+        color:#8E7BB2;
+    }
+
+    article.row {
+        width:100%;
+        max-width:800px;
+        margin:0 auto;
+        padding:45px 0;
+    }
+    
+    article.row div {
+        width:49.4%;
+        display:inline-block;
+        position:relative;
+    }
+
+
+/*article.row {border:1px solid white;}
+article.row:hover {border:1px solid yellow;}
+article.row div:hover {border:1px solid green;}*/
+
+
+    #idea-one img, #idea-two img, #idea-three img, #idea-four img {
+    position:absolute;
+    bottom:-20px;
+    left:50px;}
+
+
+    @media(max-width:750px){
+
+        article.row div {
+            min-width:300px;
+            width:90%;
+            margin:0 5%;
+            text-align:center;
+            display:block;}
+  
+	    #some-other-box h3 {
+            text-align:center;
+        }
+
+	    #idea-one img, #idea-two img, #idea-three img, #idea-four img {
+            position:relative;
+            margin:auto;
+            left:inherit;
+            bottom:inherit;
+        }
+
+        #idea-two, #idea-four {
+            display:-webkit-box;
+            display:-moz-box;
+            display:box;
+            -webkit-box-orient:vertical;
+            -moz-box-orient:vertical;
+            box-orient:vertical;
+        }
+  
+	    #idea-two div:first-of-type {
+            -webkit-box-ordinal-group:2;
+            -moz-box-ordinal-group:2;
+            box-ordinal-group:2;
+        }
+        #idea-four div:first-of-type {
+            -webkit-box-ordinal-group:2;
+            -moz-box-ordinal-group:2;
+            box-ordinal-group:2;
+        }
+        }
+</style>
 </head>
+
 <body>
-    //Team introduction 
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navbar">
+          <a class="navbar-brand" href="index.html">GSAP Overview</a>
+          <div id="shiftRight">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>            
+                  <a class="nav-link" href="#">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" aria-disabled="true">Installing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Usages
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="usage-one.htm">Parallax Effects</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Usage Two (replace with acutal)</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Usage Three (replace with acutal)</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Usage Four (replace with acutal)</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"> 
+              </ul>
+            </div>
+          </div>      
+        </div>
+      </nav>
+      <br><br><br>
+      <div id="mainContent">
+        <div class="container">
+            <div id="some-box">
+                <h1>Meet Our Team</h1>
+              
+                  <article class="row" id="idea-one">
+                      <div><img src="http://placekitten.com/g/240/210"/></div>
+                      <div>
+                          <h3>Cole Andrews</h3>
+                          <p>
+                            Here's your descriptive text for your idea to sell people on the thing after the image gets their attention. This type of section looks best when there's enough text to take up most of the height of the adjacent image.
+                          </p>
+                      </div>
+                  </article>
+              
+                  <article class="row" id="idea-two">
+                      <div>
+                          <h3>Madelyn Grimes</h3>
+                          <p>
+                            Alternating images and text works with the natural flow of your user's eyes as they scan the page, allowing their eyes to catch on each of the images in turn. If the user's eyes catch on an image, they'll likely read the accompanying text.
+                          </p>
+                      </div>
+                      <div><img src="http://placekitten.com/g/310/200"/></div>
+                  </article>
+              
+                  <article class="row" id="idea-three">
+                      <div><img src="img/julia.png"/></div>
+                      <div>
+                          <h3>Julia Norton</h3>
+                          <p>
+                            Interaction Design student going into her senior year at KSU. Fan of dogs and of horror movies, but never of dogs in horror moviees.
+                          </p>
+                      </div>
+                  </article>
+
+                  <article class="row" id="idea-four">
+                    <div>
+                        <h3>Reagan Yost</h3>
+                        <p>
+                          Alternating images and text works with the natural flow of your user's eyes as they scan the page, allowing their eyes to catch on each of the images in turn. If the user's eyes catch on an image, they'll likely read the accompanying text.
+                        </p>
+                    </div>
+                    <div><img src="http://placekitten.com/g/310/200"/></div>
+                </article>
+              
+              </div>
+        </div>
+      </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
