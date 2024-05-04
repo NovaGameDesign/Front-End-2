@@ -5,10 +5,22 @@
     box-sizing: border-box;
     /* border: 0.5px solid salmon;*/
 } 
-h1, h2
-{
-  width: 50vw;
-  border-bottom: 2px solid grey;
+body {
+  padding: 0;
+  margin: 0;    
+  font-weight: 300;
+  height: 100vh;
+  overflow: auto;
+
+  padding-bottom: 50px;
+  color: aliceblue;
+  background-color: rgb(19, 19, 19) !important;
+  font-family: Mori, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  
 }
 img
 {
@@ -17,19 +29,32 @@ img
     margin-left: auto;
     margin-right: auto;
 }
-body
-{
-    grid-template-areas:
-    "head head head"
-    "content content"
-    "foot foot foot";
-
-    padding-bottom: 50px;
-  
-}
 footer
 {
+  margin-top: 2%;
+  padding: 10px;
   text-align: center;
+  background-color: black;
+}
+button {
+  margin: 5px;
+  display: inline-block;
+  outline: none;
+  padding: 8px 14px;
+  background: var(--dark);
+  border: solid 2px var(--color-surface-white);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 99px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 18px;
+}
+.center
+{
+  margin: auto;
 }
 #mainContent
 {
@@ -63,6 +88,14 @@ footer
   width: 100vw;
   background-color: black;
 }
+.container 
+{
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
 .indent
 {
   margin-left: 15%;
@@ -85,7 +118,6 @@ footer
 }
 #col2
 {
-
   width: fit-content;
   margin: 5px;
   border: 1px solid black;
@@ -99,15 +131,88 @@ footer
   border: 1px solid black;
   grid-area: three;
 }
-.dividingLine
+.dividingLine, hr
 {
-  margin: 25px;
-  border-bottom: 1px solid rgb(30, 68, 156)
+  margin: 5%;
+  border-top: 1px solid rgb(30, 68, 156)
 }
 .img-100p
 {
   width: 100%;
 }
+.img-50p
+{
+  width: 50%;
+}
+.img-25p
+{
+  width: 25%;
+}
+
+  .container.grid, .container.columns {
+  align-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.letter {
+  text-align: center;
+  color: black;
+  font-size: 10vmax;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+}
+.container,.grid, .letter 
+{
+  flex-basis: 50%;
+}
+.container,.columns, .letter 
+{
+  flex-basis: 25%;
+}
+.for, .gsap {
+  font-size: 5vmax;
+  color: var(--color-surface-white);
+}
+.for {
+  padding: 2px 1.6vmax;
+  font-weight: 300;
+  display: none;
+}
+.gsap {
+  padding: 2px 0;
+  font-weight: 600;
+  display: none;
+}
+.group {
+  width: 740px;
+  height: auto;
+  margin: 1rem auto;
+  padding: 4px;
+  border: solid 2px var(--color-surface-white);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  color: var(--color-just-black);
+  position: relative;
+  border-radius: 10px;
+}
+
+button {
+  text-transform: none;
+  margin: 0.25rem;
+}
+
+.nav.light {
+  padding-top: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
 @media screen and (max-width: 725px)
 {
   .indent

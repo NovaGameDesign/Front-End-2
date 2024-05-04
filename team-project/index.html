@@ -24,62 +24,8 @@
   --color-surface50: #7c7c6f;
   --color-surface25: #42433d;
 }
-  * 
-  {
-  box-sizing: border-box;
-  }
-  body {
-    padding: 0;
-    margin: 0;    
-    font-weight: 300;
-    height: 100vh;
-  }
-  .container 
-  {
-    display: flex;
-    height: 30%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-    .container.grid, .container.columns {
-    align-content: stretch;
-    align-items: stretch;
-    flex-wrap: wrap;
-  }
-  .letter {
-    text-align: center;
-    color: black;
-    font-size: 10vmax;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 6px;
-  }
-  .container,.grid, .letter 
-  {
-    flex-basis: 50%;
-  }
-  .container,.columns, .letter 
-  {
-    flex-basis: 25%;
-  }
-  .for, .gsap {
-    font-size: 5vmax;
-    color: var(--color-surface-white);
-  }
-  .for {
-    padding: 2px 1.6vmax;
-    font-weight: 300;
-    display: none;
-  }
-  .gsap {
-    padding: 2px 0;
-    font-weight: 600;
-    display: none;
-  }
+
+
   .container.final .for, .container.final .gsap {
     display: block;
   }
@@ -113,14 +59,7 @@
   right: 30px;
   }
   body {
-  color: var(--color-surface-white);
-  background-color: var(--color-just-black);
-  font-family: Mori, sans-serif;
-  font-weight: 400;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.45;
-  text-align: center;
+ 
 }
 
 .group.reorder {
@@ -131,19 +70,6 @@ h1 {
   font-weight: 400;
 }
 
-.group {
-  width: 740px;
-  height: auto;
-  margin: 1rem auto;
-  padding: 4px;
- border: solid 2px var(--color-surface-white);
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  color: var(--color-just-black);
-  position: relative;
-  border-radius: 10px;
-}
 
 .box {
   margin: 4px;
@@ -174,24 +100,15 @@ h1 {
 .box:nth-child(5) {
    background-color: #0ae448;
 }
-
-
-button {
-  margin: 0 auto;
-  display: inline-block;
-  outline: none;
-  padding: 8px 14px;
-  background: var(--dark);
-  border: solid 2px var(--color-surface-white);
-  color: var(--light);
-  text-decoration: none;
-  border-radius: 99px;
-  padding: 12px 25px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  line-height: 18px;
+.container {
+  display: flex;
+  height: 44%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
 
   </style>
 </head>
@@ -220,9 +137,9 @@ button {
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="usage-one.htm">Parallax Effects</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="usage-two.htm">Usage Two (replace with acutal)</a></li>
+                <li><a class="dropdown-item" href="usage-two.htm">Scroll To</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="usage-three.htm">Usage Three (replace with acutal)</a></li>
+                <li><a class="dropdown-item" href="usage-three.htm">Staggered Animations</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="usage-four.htm">Physics 2D</a></li>
               </ul>
@@ -245,14 +162,48 @@ button {
       <h3>Powerful animation with simple code, GreenSock Animation Platform</h1>
     </header>
     <section class="indent">
-      GreenSock Animation platform, or GSAP for short, is a powerful animation library for web development. Using GSAP developers can animate practically anything with simple APIs using JavaScript. 
+      GSAP, which stands for GreenSock Animation Platform, is a powerful JavaScript animation library used for creating high-performance, complex animations for the web. 
+     Using GSAP developers can animate practically anything with simple APIs using JavaScript. 
       With its powerful suite of tools GSAP can be seen in use on a multitude of websites such as YouTube and Amazon. 
     </section>
-    <div class="dividingLine"></div> 
 
+    <div class="indent">
+      <div class="row">
+        <img src="img/youtube.png" class="img-50p col-6" alt="">
+        <img src="img/amazon.jpg" class="img-50p col-6" alt="">
+      </div>            
+    </div>
+    
+    <div class="dividingLine"></div> 
+<div class="indent">
+  <h3>
+    GSAP Can be simple
+  </h3>
+  <p>
+    GSAP doesn't have to be complex... as some of the best animations be be created with only a few lines of code! 
+    <br><br>
+    GSAP's Tween feature allows developers to make simple interactions like changing the position of an element or changing its rotation! 
+    This functionality can then be extended to be paused, played, reversed, or even restarted from the beginning! Plus, GSAP works with almost anything, not just HTML elements! It is completely possible to take this interaction and apply it to other things like videos.
+  </p>
+
+</div>
+<div class="indent">
+  <img src="img/shuriken.png" alt="" class="flair">
+  <div class="nav justify-content-center">
+    <div class="row ">
+      <button class="col-3" id="play">play()</button>
+      <button class="col-3" id="pause">pause()</button>
+      <button class="col-3" id="resume">resume()</button>
+      <button class="col-3" id="reverse">reverse()</button>
+      <button class="col-3" id="restart">restart()</button>
+    </div>    
   </div>
-  <div style="margin-bottom: 15px;">
-    <h3>Want to know what kinds of animations and interactions you can achieve?</h3>
+</div>
+
+<div class="dividingLine"></div>
+  </div>
+  <div class="indent" style="margin-bottom: 15px;">
+    <h3>Looking for more? GSAP's Plugins Are The Best Best Bet!</h3>
   </div>
   <div class="container final">
     <div class="letter F">F</div>
@@ -265,72 +216,106 @@ button {
   
   
   
-  <h4 style="margin-top: 25px;">Smoothly change flex direction with GSAP's Flip Plugin</h4>
+  <h4 class="indent text-center" style="margin-top: 25px;">
+    Smoothly change flex direction with GSAP's Flip Plugin
+  </h4>
   
-  <div class="group" id="group">
-    <div class="box">These text boxes with change their position and orientation as desired! 
+  <div class="indent">
+    <div class="group" id="group">
+      <div class="box">These text boxes with change their position and orientation as desired! 
+      </div>
+      <div class="box">With a few short lines of code you can create powerful flip interactions like this.
+      </div>
+      <div class="box">When the flip animation is done, elements get reverted back to their normal positioning and everything appears seamless.</div>
     </div>
-    <div class="box">With a few short lines of code you can create powerful flip interactions like this.
-    </div>
-    <div class="box">When the flip animation is done, elements get reverted back to their normal positioning and everything appears seamless.</div>
-    
   </div>
-  <button id="changeLayout" class="button">change</button> 
-  <button id="AddMore" class="button">Add Box</button> 
+ 
+  <div class="indent">
+    <div class="row justify-content-center">
+      <button id="changeLayout" class="button col-2">Change Orientation</button> 
+      <button id="AddMore" class="button col-2">Add Box</button> 
+    </div>    
+  </div> 
 
+  <div class="indent">
+    <h3>GSAP's Many plugins</h3>
+    <p>
+      GSAP has not just one or two plugins, but over twenty optional plugins you can use to extend their base functionality. 
+      <ol>
+        <li>
+          <strong>ScrollTrigger:</strong> This plugin allows you to trigger animations based on the scroll position of the page. It's commonly used for creating scroll-based animations such as parallax effects, pinning elements, and triggering animations as they come into view.
+        </li>
+        <li>
+          <strong>SplitText:</strong> SplitText enables you to animate individual characters, words, or lines within a text element. This is useful for creating eye-catching text animations, like typewriter effects or text reveals.
+        </li>
+        <li>
+          <strong> DrawSVG:</strong> DrawSVG allows you to animate the drawing of SVG paths. This is often used to simulate the drawing of illustrations or diagrams, providing a hand-drawn effect.
+        </li>
+        <li>
+          <strong>MorphSVG:</strong> MorphSVG enables you to smoothly morph between different SVG shapes or paths. It's commonly used for creating organic animations, such as transforming one SVG icon into another.
+        </li>
+        <li>
+          <strong>BezierPlugin:</strong> BezierPlugin extends GSAP's easing capabilities by allowing you to define custom Bezier curves for tweening animations. This gives you more control over the acceleration and deceleration of animations.
+        </li>
+      </ol>
+    </p>
+  </div>
   <div class="dividingLine"> </div>
 
-  <h2>
-    Explore other usages?
-  </h2>
   <div class="indent">
-    <div class="row">
+    <h2>
+      Explore other usages?
+    </h2>
+  </div>
+  
+  <div class="indent">
+    <div class="row justify-content-center" >
       <div class="col-sm-6 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="usage-one.htm" class="btn btn-primary">Explore PAGE 1</a>
+            <h5 class="card-title">Parallax </h5>
+            <p class="card-text">All about using GSAP to create a Parallax effect.</p>
+            <a href="usage-one.htm" class="btn btn-primary">Explore Parallax.</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="usage-two.htm" class="btn btn-primary">Explore PAGE 2</a>
+            <h5 class="card-title">Scroll To</h5>
+            <p class="card-text">All about using GSAP to create a scroll to interaction.</p>
+            <a href="usage-two.htm" class="btn btn-primary">Explore Scroll To</a>
           </div>
         </div>
       </div>
     </div>
     <div style="border-bottom: 1px solid black; margin: 15px;"></div>
-    <div class="row">
+    <div class="row justify-content-center"> 
       <div class="col-sm-6 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="usage-three.htm" class="btn btn-primary">Explore PAGE 3</a>
+            <h5 class="card-title">Staggered Animations</h5>
+            <p class="card-text">Overview of GSAP's stagger functionality when playing animations.</p>
+            <a href="usage-three.htm" class="btn btn-primary">Explore Staggered Animations</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="usage-four.htm" class="btn btn-primary">Explore PAGE 3</a>
+            <h5 class="card-title">Physics 2D</h5>
+            <p class="card-text">Brief overview of the physics 2d functionality found in GSAP.</p>
+            <a href="usage-four.htm" class="btn btn-primary">Explore Physics 2D</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="dividingLine"></div>
-
+  
   <footer>
     This page was created in HTML, CSS, and JavaScript
+    <br>
   </footer>
     
  
@@ -374,11 +359,8 @@ gsap.delayedCall(1, nextState);
 </script>
 
 <script>
-
 const source = document.getElementById("group");
 const button = document.getElementById("AddMore");
-
-
 
 button.addEventListener("click", () => {
   
@@ -391,6 +373,7 @@ button.addEventListener("click", () => {
 
 </script>
 <script>
+
   gsap.registerPlugin(Flip);
 
   const group = document.querySelector(".group");
@@ -412,5 +395,33 @@ button.addEventListener("click", () => {
       // you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc. 
     });
   });
+</script>
+
+<script>
+  let tl = gsap.timeline({repeat:-1, repeatDelay: 5});
+  tl.to(".col-6", { rotation: -360, duration: 3, ease: "elastic" })
+  .to(".col-6", { rotation: -180, duration: 3, ease: "elastic" })
+  .to(".col-6", { rotation: 0, duration: 3, ease: "elastic" });
+  
+</script>
+
+<script>
+  let nav = document.querySelector('.nav')
+
+let tween = gsap.to(".flair", {
+  duration: 2, 
+  x: () => nav.offsetWidth, // animate by the px width of the nav
+  xPercent: -100, // offset by the width of the box
+  rotation: 360, 
+  ease: "none", 
+  paused: true
+});
+
+// click handlers for controlling the tween instance...
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#pause").onclick = () => tween.pause();
+document.querySelector("#resume").onclick = () => tween.resume();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+document.querySelector("#restart").onclick = () => tween.restart();
 </script>
 </html>
